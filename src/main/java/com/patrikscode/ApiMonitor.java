@@ -46,13 +46,4 @@ public class ApiMonitor {
         return endpoints.get(index) + " (" + times.get(index) + "ms)";
     }
 
-    public void printResponseReport() {
-        System.out.println("\n-- Response Time Report --");
-        for (int i = 0; i < endpoints.size(); i++) {
-            System.out.println(endpoints.get(i) + " -> " + times.get(i) + "ms");
-        }
-        System.out.printf("Average: %.1fms%n", getAverage());
-        System.out.println("Fastest: " + getFastest());
-        System.out.println("Slowest: " + getSlowest());
-    }
 }

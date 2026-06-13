@@ -1,10 +1,10 @@
 package com.patrikscode;
 
 public class Bug {
-        private String id;
-        private String summary;
-        private String severity;
-        private String priority;
+        private final String id;
+        private final String summary;
+        private final String severity;
+        private final String priority;
         private String status;
 
         public Bug(String id, String summary, String severity, String priority) {
@@ -21,6 +21,9 @@ public class Bug {
         public String getPriority() { return priority; }
         public String getStatus()   { return status; }
         public void setStatus(String status) { this.status = status; }
+
+
+
 
         public void printBug() {
             System.out.println(id + " | " + summary + " | " + severity + " | " + priority + " | " + status);
